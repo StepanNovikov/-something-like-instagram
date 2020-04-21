@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {ImageBox} from '../ImageBox';
 import {pictures} from '../../pictures';
+import {Gallery} from '../Gallery';
 
 export class App extends Component {
     render(){
@@ -8,9 +8,7 @@ export class App extends Component {
             <div>
                 <main>
                     <div className="container">
-                        <div className="gallery">
-                            {pictures.map((picture,idx) => <ImageBox key={idx} {...picture}/>)}
-                        </div>
+                        <Gallery pictures={pictures}/>
                     </div>
                 </main>
                 
@@ -18,3 +16,6 @@ export class App extends Component {
         )
     }
 }
+
+
+
